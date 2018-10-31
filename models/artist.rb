@@ -1,4 +1,5 @@
 require_relative('../db/sql_reader')
+require_relative('album')
 
 class Artist
 
@@ -31,6 +32,14 @@ class Artist
     result = SqlRunner.run(sql)
     artists = result.map{| artist | Artist.new(artist)}
     return artists
+  end
+
+  def list_all_albums
+    sql = "SELECT * FROM albums WHERE artist_id = $1"
+    value = [@id]
+    result = SqlRunner.run(sql, value)
+    all_albums = result.map{| album | Album.new(album)}
+    return all_albums
   end
 
 end

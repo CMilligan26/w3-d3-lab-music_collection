@@ -33,8 +33,11 @@ album3 = Album.new({
   })
 album3.save
 
-Album.list_all
-Artist.list_all
+# Album.list_all
+# Artist.list_all
+
+artist1.list_all_albums
+album1.artist
 
 binding.pry
 nil
