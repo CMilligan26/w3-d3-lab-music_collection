@@ -34,6 +34,10 @@ album3 = Album.new({
 album3.save
 
 album3.title = "No Love Deep Web"
+album3.update
+
+artist1.name = "Limp Biscuit"
+artist1.update
 
 # album3.delete
 # artist2.delete
