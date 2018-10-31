@@ -33,20 +33,23 @@ album3 = Album.new({
   })
 album3.save
 
+Artist.find_by_id(artist1.id)
+Album.find_by_id(album3.id)
+
+Album.list_all
+Artist.list_all
+
+artist1.list_all_albums
+album1.artist
+
 album3.title = "No Love Deep Web"
 album3.update
 
 artist1.name = "Limp Biscuit"
 artist1.update
 
-# album3.delete
-# artist2.delete
-
-# Album.list_all
-# Artist.list_all
-
-# artist1.list_all_albums
-# album1.artist
+album3.delete
+artist2.delete
 
 binding.pry
 nil
